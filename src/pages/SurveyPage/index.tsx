@@ -29,6 +29,8 @@ const SurveyPage = () => {
         setQuestionIndex(prev => prev + 1)
     }
 
+    const handleReturn = () => navigate('/')
+
     if (questionIndex >= test.questions.length) {
         console.log(answers)
         return (
@@ -36,7 +38,7 @@ const SurveyPage = () => {
                 <h2 className="text-3xl font-bold mb-4">Опрос завершён</h2>
                 <p className="mb-6 text-gray-600">Спасибо за участие!</p>
                 <button
-                    onClick={() => navigate('/')}
+                    onClick={handleReturn}
                     className="px-6 py-2 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors"
                 >
                     Вернуться на главную
